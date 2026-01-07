@@ -1,5 +1,6 @@
 About the Project:
 ShopCart Accessories is a modern and responsive e-commerce website built with Next.js, TailwindCSS, Shadcn UI, and TypeScript. It allows users to browse, search, and purchase accessories seamlessly.
+
 This project is designed to demonstrate a clean UI, interactive components, and a smooth shopping experience.
 
 Key goals:
