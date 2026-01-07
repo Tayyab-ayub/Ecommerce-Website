@@ -4,6 +4,9 @@ This project is designed to demonstrate a clean UI, interactive components, and 
 
 Key goals:
 . Display a wide range of accessories with images, descriptions, and prices.
+
 . Enable users to add items to a cart and view their selections.
+
 . Provide responsive design for both desktop and mobile devices.
+
 . Showcase reusable components and consistent styling using TailwindCSS and Shadcn UI.
