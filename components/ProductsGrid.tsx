@@ -2,7 +2,7 @@
 'use client'
 import Link from 'next/link';
 import React, { useState } from 'react';
-import { gadgetsacessories, products } from '@/app/constants/data';
+import { gadgetsacessories, products, productsByCategory } from '@/app/constants/data';
 import { Button } from './ui/button';
 import HomeTab from './HomeTab';
 import { motion } from "motion/react"
@@ -11,7 +11,8 @@ import ProductListing from './ProductListing';
 const ProductsGrid = () => {
   const [items, setitems] = useState<[]>([]);
   const [loading, setLoading] = useState();
-  const [selectedTab, setSelectedTab] = useState(products[0]?.value|| "");
+  const [selectedTab, setSelectedTab] = useState(products[0].value);
+  const currentproducts = productsByCategory[selectedTab] || []
   return (
     <div>
       <HomeTab onTabSelect={setSelectedTab} selectedTab={selectedTab} />
@@ -25,7 +26,7 @@ const ProductsGrid = () => {
         </div>
       ) : products?.length > 0 ? (
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2.5 mt-10'>
-          {gadgetsacessories?.map((product) => (
+          {currentproducts?.map((product) => (
             <motion.div>
               <ProductListing product={product} />
             </motion.div>
